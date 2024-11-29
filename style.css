@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding:20px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: -3px -18px 46px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px -18px 46px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px -18px 46px 0px rgba(0,0,0,0.75);
+}
+
+.fa-bars{
+    font-size: 2rem;
+}
+
+.searchInput input{
+    width: 500px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.cartItemsQuantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-cart-shopping{
+    font-size: 2rem;
+}
+
+.counter{
+    position: relative;
+    background-color: #22d0ee;
+    padding: 2px 6px;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    bottom: 10px;
+    right: 6.5px;
+}
+
+.container{
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    padding: 30px;
+    border: 1px solid #000;
+    width: 30%;
+    height: 500px;
+}
+
+
+.btns{
+    display: flex;
+    gap: 10px;
+}
+
+.jsBtn {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    margin: 8px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
