@@ -1,6 +1,6 @@
 const div = document.querySelector(".container")
 
-fetch('https://dummyjson.com/products')
+const datafetch = fetch('https://dummyjson.com/products')
 .then(res => res.json())
 .then(data => {
     
@@ -17,7 +17,7 @@ fetch('https://dummyjson.com/products')
             <h1>Price: $${product.price}</h1>   
             <div class="btns">
                 <button class="jsBtn" onclick="seeMore(${product.id})">See More</button>
-                <button class="jsBtn" onclick="addToCart(${JSON.stringify(product)})">Add To Cart</button>
+                <button class="jsBtn" onclick="addToCart(${product.index})">Add To Cart</button>
             </div>
         </div>
                 
@@ -32,14 +32,29 @@ fetch('https://dummyjson.com/products')
 const cartItems = []
 console.log(cartItems);
 
-function addToCart(product) {
-    const parsedProduct = JSON.parse(JSON.stringify(product))
-
-    cartItems.push(parsedProduct)
-
-    localStorage.setItem("items", JSON.stringify(cartItems))
-    console.log(cartItems)
+function addToCart(index) {
+    // cartItems.push(datafetch[index])
 }
+
+// const checkIndex = cartItems.findIndex(item => item.id === mobilePhones[index].id);
+//             console.log("index kia ha",checkIndex)
+//     if(checkIndex === -1){
+//         mobilePhones[index].quantity = 1
+//         cartItems.push(mobilePhones[index]) 
+//         Swal.fire({
+//         title: "Product added to cart successfully!",   
+//         icon: "success"
+//       });
+//     } else{
+        // mobilePhones[index].quantity = 1 
+//         cartItems[checkIndex].quantity += 1;
+//         Swal.fire({
+//             title: "Product quantity increased",   
+//             icon: "success"
+//           });
+//     }
+
+
 
 
 function seeMore(id) {
@@ -48,4 +63,14 @@ function seeMore(id) {
     localStorage.setItem("id" , id)
     cartItems.push(id)
     window.location = "singleProduct.html"
-}   
+}
+
+const counting = 0
+
+// function countingItems() {
+//     if(cartItems.length > 1){
+//         counting++
+//     } else{
+
+//     }
+// }
